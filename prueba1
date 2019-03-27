@@ -1,0 +1,96 @@
+import java.util.Scanner;
+
+public class prueba1 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner (System.in);
+		double matrix [][] = null;
+		int fil;
+		int col;
+		int option;
+		
+		
+		System.out.println("Give me the number of rows: ");
+		fil = sc.nextInt();
+		
+		System.out.println("Give me the number of columns: ");
+		col = sc.nextInt();
+		
+		
+		System.out.println("Give me the values for the matrix");
+		
+				  matrix = new double [fil][col];
+					 
+					for (int i = 0; i<fil;i++)
+					{
+						for(int j = 0;j<col;j++)
+						{
+							System.out.print("Position: " + i + ","+j + " ");
+							matrix[i][j] = sc.nextDouble();
+							
+						}
+					}
+					
+					System.out.println("The matrix is: ");
+					for (int i = 0; i<fil;i++)
+					{
+						for(int j = 0;j<col;j++)
+						{
+							System.out.print(matrix[i][j]+"\t");
+						}
+						System.out.println("");
+					}
+					
+					System.out.println("Are the values of the matrix correct ?");
+					System.out.println("1.-Yes");
+					System.out.println("2.-No");
+					option = sc.nextInt();
+					
+					do {
+									switch (option)
+									{
+									case 2:
+											  System.out.println("Rewrite the values: ");
+													  for (int i = 0; i<fil;i++)
+														{
+															for(int j = 0;j<col;j++)
+															{
+																System.out.print("Position: " + i + ","+j + " ");
+																matrix[i][j] = sc.nextDouble();
+																
+															}
+														}
+														
+														System.out.println("The matrix is: ");
+														for (int i = 0; i<fil;i++)
+														{
+															for(int j = 0;j<col;j++)
+															{
+																System.out.print(matrix[i][j]+"\t");
+															}
+															System.out.println("");
+														}
+														
+														System.out.println("Are the values of the matrix correct ?");
+														System.out.println("1.-Yes");
+														System.out.println("2.-No");
+														option = sc.nextInt();
+										  break;
+									case 1:
+									   
+									  System.out.println("They are correct");		
+									  option = 1;
+						           break;
+						           
+						           default:
+						        	   System.out.println("That is not an option");
+						           break;
+						           
+						           
+					            }
+					}while (option != 1);	           
+					System.out.println("The next part");
+	     }		
+							           
+	}
