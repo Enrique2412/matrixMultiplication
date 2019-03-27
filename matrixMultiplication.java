@@ -11,9 +11,9 @@ public class matrixMultiplication {
 		int i,j,x;
 		int f = 0;
 		int option;
-		int matrix1 [][] = null;
-		int matrix2 [][] = null;
-		int matrix3 [][] = null;
+		double matrix1 [][] = null;
+		double matrix2 [][] = null;
+		double matrix3 [][] = null;
 
 		System.out.println("Please give me your name: ");
 		name = sc.nextLine();
@@ -41,14 +41,14 @@ public class matrixMultiplication {
     			
 				if ((col1 == fil2)&&(fil1 <= 10)&&(col1<=10)&&(fil2<=10)&&(col2<=10))
 			    {
-		        	 matrix1 = new int [fil1][col1];                                      //First matrix
+		        	 matrix1 = new double [fil1][col1];                                      //First matrix
 		    				System.out.println("Give me the numbers of matrix 1: ");
 		    				for (i=0;i<fil1;i++)
 		    				{
 		    					for(j=0;j<col1;j++)
 		    					{
 		    						System.out.println("Position:" + i + ","+j);
-		    						matrix1[i][j] = sc.nextInt();
+		    						matrix1[i][j] = sc.nextDouble();
 		    					}
 		    				}
 		    				
@@ -66,14 +66,14 @@ public class matrixMultiplication {
 		    				 System.out.println("");												//First matrix
 		    				 
 		    				 
-		    				 matrix2 = new int [fil2][col2];                                      //Second matrix
+		    				 matrix2 = new double [fil2][col2];                                      //Second matrix
 		     				System.out.println("Give me the numbers of matrix 2: ");
 		     				for (i=0; i<fil2; i++)
 		     				{
 		     					for(j=0; j<col2; j++)
 		     					{
 		     						System.out.println("Position:" + i + ","+j);
-		     						matrix2[i][j] = sc.nextInt();
+		     						matrix2[i][j] = sc.nextDouble();
 		     					}
 		     				}
 		     				
@@ -91,7 +91,8 @@ public class matrixMultiplication {
 		     				 System.out.println("");                                              //Second matrix
 		     				 
 		     				 System.out.println("The result of the multiplication is: ");         ////////////Multiplication 
-		     				matrix3 = new int [fil1][col2];
+
+		     				matrix3 = new double [fil1][col2];
 		     				for (i=0; i<fil1 ;i++)
 		     				{
 		     					for(j=0; j<col2; j++)
