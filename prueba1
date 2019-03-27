@@ -56,7 +56,7 @@ public class prueba1 {
 														{
 															for(int j = 0;j<col;j++)
 															{
-																System.out.print("Position: " + i + ","+j + " ");
+																System.out.print("Position: " + i + ","+j); " ");
 																matrix[i][j] = sc.nextDouble();
 																
 															}
@@ -85,6 +85,11 @@ public class prueba1 {
 						           
 						           default:
 						        	   System.out.println("That is not an option");
+						        	    option = 2;
+						        	    System.out.println("Are the values of the matrix correct ?");
+										System.out.println("1.-Yes");
+										System.out.println("2.-No");
+										option = sc.nextInt();
 						           break;
 						           
 						           
@@ -92,5 +97,6 @@ public class prueba1 {
 					}while (option != 1);	           
 					System.out.println("The next part");
 	     }		
-							           
+							  
+							  
 	}
