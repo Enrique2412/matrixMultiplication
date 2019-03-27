@@ -1,6 +1,5 @@
-package matrixMultiplication;
 import java.util.*;
-public class matrixMultiplication {
+public class ValdiviaEnrique6E_Exam2{
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -108,7 +107,7 @@ public class matrixMultiplication {
 		     				System.out.println("\n");
 		     		}
 			   else 
-			    System.out.println("It can not be solved");
+			    System.out.println("It can not be solved \nThe number of columns and rows exceeds the limit \nOr The number of columns in matrix 1 is not the same as the number of rows in matrix 2");
          		break;	
 				case 2:
 			        f=1;
