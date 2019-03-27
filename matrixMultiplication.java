@@ -8,18 +8,17 @@ public class matrixMultiplication {
 		
 		String name;
 		int fil1,col1,fil2,col2;
+		int i,j,x;
 		int f = 0;
 		int option;
-		int matrix1 [][];
-		int matrix2 [][];
-		int matrix3 [][];
+		int matrix1 [][] = null;
+		int matrix2 [][] = null;
+		int matrix3 [][] = null;
 
-		
 		System.out.println("Please give me your name: ");
 		name = sc.nextLine();
 		System.out.println("Hello " + name + "\n");
 		System.out.println("Today we will perform multiplication of matrices \nThe system will perform the multiplication with matrices up to : \n10x10 \n");
-		
 		
 		do {
 			
@@ -40,25 +39,86 @@ public class matrixMultiplication {
         			System.out.println("Please enter the number of columns for matrix 2: ");
         			col2 = sc.nextInt();
     			
-				if (((fil1 > 10)||(col1 > 10))||((fil2 > 10)||(col2 > 10)))
-				{
-					System.out.println("It can not be solved");
-				}
-				else 
-				
-        				System.out.println("It can be done");
-        				
-				break;		
-			 case 2:
-			  f=1;
-			  break;
-			 default:
-			  System.out.println("Select a real option");
-			sc.close();
-		
-	             }
-	   
+				if ((col1 == fil2)&&(fil1 <= 10)&&(col1<=10)&&(fil2<=10)&&(col2<=10))
+			    {
+		        	 matrix1 = new int [fil1][col1];                                      //First matrix
+		    				System.out.println("Give me the numbers of matrix 1: ");
+		    				for (i=0;i<fil1;i++)
+		    				{
+		    					for(j=0;j<col1;j++)
+		    					{
+		    						System.out.println("Position:" + i + ","+j);
+		    						matrix1[i][j] = sc.nextInt();
+		    					}
+		    				}
+		    				
+		    				System.out.println("The first matrix is:");
+						 	  for (i=0;i<fil1;i++)
+						 	  {
+						 		  for (j=0;j<col1;j++)
+						 		  {
+						 			  System.out.print(matrix1[i][j]+"\t");
+						 			  
+						 		  }
+						 		  System.out.println(" ");
+						 	  }
+						 	  System.out.println("\n");                                             
+		    				 System.out.println("");												//First matrix
+		    				 
+		    				 
+		    				 matrix2 = new int [fil2][col2];                                      //Second matrix
+		     				System.out.println("Give me the numbers of matrix 2: ");
+		     				for (i=0; i<fil2; i++)
+		     				{
+		     					for(j=0; j<col2; j++)
+		     					{
+		     						System.out.println("Position:" + i + ","+j);
+		     						matrix2[i][j] = sc.nextInt();
+		     					}
+		     				}
+		     				
+		     				System.out.println("The second matrix is:");
+							 	  for (i=0; i<fil2; i++)
+							 	  {
+							 		  for (j=0; j<col2; j++)
+							 		  {
+							 			  System.out.print(matrix2[i][j]+"\t");
+							 			  
+							 		  }
+							 		  System.out.println(" ");
+							 	  }
+							 	  System.out.println("\n");                                             
+		     				 System.out.println("");                                              //Second matrix
+		     				 
+		     				 System.out.println("The result of the multiplication is: ");         ////////////Multiplication 
+		     				matrix3 = new int [fil1][col2];
+		     				for (i=0; i<fil1 ;i++)
+		     				{
+		     					for(j=0; j<col2; j++)
+		     					 {
+		     						for(x=0; x<col1; x++)
+		     						  {
+		     									matrix3 [i][j] = matrix3 [i][j] + (matrix1[i][x] * matrix2 [x][j]);
+		     						  }
+		     						System.out.print(matrix3[i][j]+"\t");
+		     					  }
+		     					System.out.println("");
+		     				  }
+		     				System.out.println("\n");
+		     		}
+			   else 
+			    System.out.println("It can not be solved");
+         		break;	
+				case 2:
+			        f=1;
+			    break;
+			    default:
+			      System.out.println("Select a real option");
+			     break;
+			     
+		   }
 	}while (f==0);	
 	System.out.println("Bye");
+	sc.close();
     }
 }
