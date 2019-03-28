@@ -47,7 +47,7 @@ public class matrixMultiplication {
 		    				{
 		    					for(j=0;j<col1;j++)
 		    					{
-		    						System.out.println("Position:" + i + ","+j);
+		    						System.out.print("Position " + i + ","+j+": ");
 		    						matrix1[i][j] = sc.nextDouble();
 		    					}
 		    				}
@@ -77,7 +77,7 @@ public class matrixMultiplication {
 														{
 															for(j = 0;j<col1;j++)
 															{
-																System.out.print("Position: " + i + ","+j + " ");
+																System.out.print("Position " + i + ","+j + ": ");
 																matrix1[i][j] = sc.nextDouble();
 																
 															}
@@ -127,7 +127,7 @@ public class matrixMultiplication {
 		     				{
 		     					for(j=0; j<col2; j++)
 		     					{
-		     						System.out.println("Position:" + i + ","+j);
+		     						System.out.print("Position " + i + ","+j+": ");
 		     						matrix2[i][j] = sc.nextDouble();
 		     					}
 		     				}
@@ -159,7 +159,7 @@ public class matrixMultiplication {
 															{
 																for(j = 0;j<col2;j++)
 																{
-																	System.out.print("Position: " + i + ","+j + " ");
+																	System.out.print("Position " + i + ","+j + ": ");
 																	matrix2[i][j] = sc.nextDouble();
 																	
 																}
@@ -236,3 +236,6 @@ public class matrixMultiplication {
 	sc.close();
     }
 }
+
+         	
+
